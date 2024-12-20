@@ -1,23 +1,18 @@
-/**
- * @param {number[]} digits
- * @return {number[]}
-//  */
-// Input: digits = [4,3,2,1]
-// Output: [4,3,2,2]
+ public static int[] PlusOne(int[] digits)
+ {
+     for (int i = digits.Length - 1; i >= 0; i--) {
+         if (digits[i] != 9) {
+             digits[i] = digits[i]+1;
+             return digits;
+         }
+         else
+         {
+            
+             digits[i] = 0;
 
-// Input: digits = [9]
-// Output: [1,0]
-
-var digits = [9,9]
-var plusOne = function(digits) {
-    var count=0;
-    var total=0
-    for(let i=0;i<digits.length;i++) {
-      total=digits[i]
-      count++
-    }
-    digits[count-1]=total+1
-    console.log(digits)
-};
-
-plusOne(digits);
+         }      
+     }
+     digits = new int[digits.Length + 1];
+     digits[0] = 1;
+     return digits;
+ }
